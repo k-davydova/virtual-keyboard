@@ -27,7 +27,7 @@ h1 {
 
 .textarea {
   width: 100%;
-  height: 100%;
+  height: 80px;
   background-color: #ffffff;
   margin-bottom: 40px;
 }
@@ -60,18 +60,18 @@ h1 {
   transition: 0.4s;
 }
 
-._active {
+.key__item._active {
   background-color: #418DDD;
 }
 
 .backspace,
 .enter,
-.key__item:nth-child(43) {
+.shiftleft {
   width: 100px;
 }
 
 .tab {
-  width: 55px;
+  width: 75px;
 }
 
 .capslock {
@@ -81,6 +81,10 @@ h1 {
 .controlleft,
 .controlright {
   width: 60px;
+}
+
+.delete {
+  width: 65px;
 }
 
 .space {
