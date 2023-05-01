@@ -18,6 +18,9 @@ textarea.className = 'textarea';
 const keyboard = document.createElement('div');
 keyboard.className = 'keyboard';
 
+const description = document.createElement('p')
+description.textContent = 'Привет! Делала на macOS, но надеюсь все будет работать на windows тоже. Не успела сделать переключение языка и другие кнопки, которые работают при зажатии. Остальные (caps lock, enter, del и тд) работают'
+
 let up = 0;
 let isMouseDown = false;
 
@@ -46,12 +49,11 @@ function makeKeyboard(array, reset = false) {
   });
 
   body.append(wrapper);
-  wrapper.append(header, textarea, keyboard);
+  wrapper.append(header, textarea, keyboard, description);
 }
 makeKeyboard(array);
 
 function buttonClick(char) {
-  // console.log(char)
   if (char === 'capslock') {
     up = (up === 0) ? 1 : 0;
     makeKeyboard(array, true);
